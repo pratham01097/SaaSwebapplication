@@ -1,1 +1,12 @@
-
+when i first read the mail about selecting modules and saw the descripation of 1028 i was very excited to take up this module and challenge myself with something tricky and useful
+i had made a few basic projects using python and learned about the language. When i got a mail that i was selected for 1028 it made me very happy and then i started off with selecting my projects first and i got the allotment of my project. I was a bit scared after seeing the description of the project as it had a few things like git hub flask and python anywhere to which i was completly new to.
+I started off my journey by seeing a complete tutorial of git hub and learning how to use github at the very first and was my first step towards the learning process. Initially i had a few problems with github like using it with vs code i faced a few errors which took time to over come and start using github fully
+after git hub i took a basic tutorial on flask on how to create a basic flask website after that it caught my intrest and i strated builind a web app using flask which had basic services like login and navigating through navbar
+during this i faced a number of issues which i couldn't debug like linking the SQLAlchemy to the vs code and creating a .db file 
+i also lerant how to make python pacakages and along with that i added templates of html to the website and took a basic idea of using jinja syntax
+WEDNESDAY 19th January 
+We had our first meeting for which i was very nervous and scared as i had not understood my project very clearly and did not even have experience in flaks before the meeting 
+i was also not very sure about the diary so i had written it down instead of writting it digitally so i was not able to present it.
+The first meeting was very helpful for me as i got a good idea about the project i am working on and i knew where i could start from 
+now i have a very good idea about how my initial pages of login and forms should like starting with creating a basic website where i can navigate through the web app
+i also got to know about a subscription app called notion from which i take influence 
