@@ -10,3 +10,14 @@ i was also not very sure about the diary so i had written it down instead of wri
 The first meeting was very helpful for me as i got a good idea about the project i am working on and i knew where i could start from 
 now i have a very good idea about how my initial pages of login and forms should like starting with creating a basic website where i can navigate through the web app
 i also got to know about a subscription app called notion from which i take influence 
+
+THURSDAY 20th January 
+I started working with forms in Flaskk and explored various new terms like wtforms and importing diffrent feilds using wtforms like SubmitField and others which are very convinient i also started looking at the jinja syntax and its uses which will help in using flask and implement logic code. Today i also tried to create a form for sign in and password 
+
+Friday 21th January 
+I now started working with templates directory where i created a basic html which will have common asthetics for all the navigated tabs and using jinja syntax i used to create various more templates rather than writing the html code again and again now i have created 4 diffrent templates using one base template and jinja syntax where you can easily navigate through the routes using the navbar and used a function called {{ url_for('home_page')}} using jinja syntax .
+
+Monday 24th January 
+I now wanted to add the submitted details of the form to a databse but i wasnt able to do so , i Have been working on finding a debug solution for the same i also reffered many diffrent solutions and tutorials but not able to do so, alternately i tried to store the informatio in  a python list which could work well for less number of data but ddefinetly if i could work with a databse will be better. I also tried to learn how to send mails using STMP service which might be Helpful for us in the future.
+
+I will be travelling back to belfast on 25th and will reach belfast on 26th january so i have asked Jhon to host my meeting on a later date and our weekly meeting is now scheduled  on 27th Thursday 1pm
