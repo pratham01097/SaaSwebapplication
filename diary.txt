@@ -33,10 +33,13 @@ along with cracking through my database issue i also had a very good hands on ex
 
 29th January
 I had to move my code from VS CODE to pythonanywhere and i started exploring pythonanywhere, i started with shifting my routes then my basic template and checking if it would work and after a few changes#
-my code started working in pythonanywhere and i was able to get the similiar base website working.after the base i imported my market zone and then the forms, i had made a very silly mistake while importing the form which took quite of my time# 
+my code started working in pythonanywhere and i was able to get the similiar base website working.after the base i imported my market zone and then the forms, i had made a very silly mistake while importing the form which took quite of my time
 for debbuging and i finally found out that i had used the app.config['SECRET KEY '] which is essential for forms to get working.
 31st January 
-After i was able to use my code on pythonanywhere, i was going to put details of forms into a database and i was going to connect the datbase but when i tried to do so i got a very silly error and i was not able to get it working then n finally messaged John and seeked his help again and aparently i was doing a very silly mistake and had not selected the correct path while using ipython. I was so irritated with databases but now finally it is working 
+After i was able to use my code on pythonanywhere, i was going to put details of forms into a database and i was going to connect
+the datbase but when i tried to do so i got a very silly error and i was not able to get it working then n finally messaged John and seeked his help again 
+and aparently i was doing a very silly mistake and had not selected the correct path while using ipython. I was so irritated with databases but now finally it is working 
 After that i finally strated with my how to guide and started making a mindmap of how i will go about the guide and making the html.
 1st February 
-I started reading howto make how to guide uploaded by john and followed the steps and selected my template for how to guide, now i have started writing the details in word document and im going to use the converter and then put it into the html code.
+I started reading howto make how to guide uploaded by john and followed the steps and selected my template for how to guide, now i have started
+writing the details in word document and im going to use the converter and then put it into the html code.
