@@ -21,3 +21,20 @@ Monday 24th January
 I now wanted to add the submitted details of the form to a databse but i wasnt able to do so , i Have been working on finding a debug solution for the same i also reffered many diffrent solutions and tutorials but not able to do so, alternately i tried to store the informatio in  a python list which could work well for less number of data but ddefinetly if i could work with a databse will be better. I also tried to learn how to send mails using STMP service which might be Helpful for us in the future.
 
 I will be travelling back to belfast on 25th and will reach belfast on 26th january so i have asked Jhon to host my meeting on a later date and our weekly meeting is now scheduled  on 27th Thursday 1pm
+
+27th January-Thursday
+I had a very productive meeting with John,now quite a few things were more clear in my mind and i knew what are my immidieate short term goals and also got a few links from john which will clear my database doubts and along with that i also guided to the correct direction of How-to-guide. 
+
+28th January-Friday 
+John had asked me to follow a blog and use that to get myself clear with pythonanywhere and i started working with that blog, the blog was about creating a simple website and using git in pythonanywhre 
+https://blog.pythonanywhere.com/121/
+I created a basic flask application using this blog,this blog was a very excellent place to solve all my problems and i finally was able to work with databse and was sucessful entering the database and access it using pythonanywhere's SQL console 
+along with cracking through my database issue i also had a very good hands on experience with pythonamywhere and i finally can deploy my code from vs to here.
+
+29th January
+I had to move my code from VS CODE to pythonanywhere and i started exploring pythonanywhere, i started with shifting my routes then my basic template and checking if it would work and after a few changes my code started working in pythonanywhere and i was able to get the similiar base website working.after the base i imported my market zone and then the forms, i had made a very silly mistake while importing the form which took quite of my time for debbuging and i finally found out that i had used the app.config['SECRET KEY '] which is essential for forms to get working.
+31st January 
+After i was able to use my code on pythonanywhere, i was going to put details of forms into a database and i was going to connect the datbase but when i tried to do so i got a very silly error and i was not able to get it working then n finally messaged John and seeked his help again and aparently i was doing a very silly mistake and had not selected the correct path while using ipython. I was so irritated with databases but now finally it is working 
+After that i finally strated with my how to guide and started making a mindmap of how i will go about the guide and making the html.
+1st February 
+I started reading howto make how to guide uploaded by john and followed the steps and selected my template for how to guide, now i have started writing the details in word document and im going to use the converter and then put it into the html code.
