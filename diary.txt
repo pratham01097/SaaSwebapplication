@@ -56,3 +56,7 @@ After that I wrote about the wtforms which is also a function of flask and told 
 Finally, I added the database tab where I clearly explained each and every step with screenshots code snippets and as well as database screenshots where it was key to understand that using databases with python anywhere is so much more convenient to use compared to other IDEs and you can also access the database console
 4th February -:
 I was now checking my HTML file and the content and also worked on the final touchup of all the tabs once and after I was done with the howto guide I started working on the diary and wrote all the details and was ready to submit and very nervous hope everything goes well.
+6th February
+I got an email from John regarding my feedback on the HowToguide, He had pointed out my mistakes in there and also wrote everything in detail about the mistakes i have done and the Changes i have to make, i had a motivation to go back and try rectifying all my mistakes to the way John had asked me to so i started working onn them 
+7th February 
+Now as suggested by John i took a step back and started to look at my project from the begining and tried to find if i could add a few points to the project or i could add a few things to it and i realised that i could add a few navbar options to it and make it more directing towards my project now.
