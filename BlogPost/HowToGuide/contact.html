@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Data to templates</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Sending Data to templates</a></h1>
+          <h2>Using Jinja</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="examples.html">Getting started with pythonanywhere</a></li>
+          <li><a href="page.html">@app.routes</a></li>
+          <li><a href="another_page.html">HTML templates</a></li>
+          <li><a href="contact.html">Sending Data to templates</a></li>
+          <li><a href="jinja.html">Jinja</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="wtform.html">Wtform</a></li>
+          <li><a href="database.html">Databases</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="jinja.html">Jinja</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="wtform.html">Wtform</a></li>
+          <li><a href="database.html">databse</a></li>
+          <li><a href="contact.html">Sending Data to templates</a></li>
+          <li><a href="another_page.html">HTML templates</a></li>
+          <li><a href="page.html">@app.routes</a></li>
+          <li><a href="examples.html">pythonanywhere</a></li>
+          <li><a href="index.html">about flask</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <h1>
+        <!-- insert the page content here -->
+        <p>
+            In this section you will see how you can send data to the html using the python code, this is very essential if you have to dislplay an user input, you will also learn some cool things in this section like creating a table and displaying in html
+        </p>
+        <p>
+            Now you have created another route and also tried accessing it we will add
+            data in flask_app.py that we will transfer to the templates and we will see
+            how it works.
+        </p>
+        <p>
+            Let us go to our flask_app.py and we will work on our /market route and we
+            will try sending some random data to our html and this is as simple as
+            sending arguments like :
+        </p>
+        <p>
+            <img
+                width="594"
+                height="109"
+                src="style/data.002.jpg"
+            />
+        </p>
+        <p>
+        And now the way we can access this is by using the key name - '   <strong>items_name'</strong> now let us go back to our market.html.
+        </p>
+        <p>
+            To access this we have to use a web templating called jinja template and we
+            will talk about this in our next section but a thing to remember is what we
+            are talking about right now Is also a feature of jinja.
+        </p>
+        <p>
+            We fill add the following code in 'market.html' just below our &lt;h1 &gt;
+            tag. The following code :
+        </p>
+        <p>
+            <img
+                width="538"
+                height="61"
+                src="style/data.004.jpg"
+        
+            />
+        </p>
+        <p>
+            <strong>Make sure to keep a space before and after the item_name</strong>
+        </p>
+        <p>
+            This {{ }} is a jinja syntax that allows us to call a data using its key
+            name now when we have completed coding this we save and reload both our
+            files and see the change in our /market page :
+        </p>
+        <p>
+            <img
+                width="520"
+                height="197"
+                src="style/data.006.jpg"
+        
+            />
+        </p>
+        <p>
+            You will see that Phone has appeared below our h1 tag and we have
+            successfully sent data to templates.
+        </p>
+        <p>
+            I made a silly mistake here by writing {{ item_name}} where as my key name
+            was items_name so it was not loading In the initial then it worked out :
+        </p>
+        <p>
+            <img
+                width="601"
+                height="40"
+                src="style/data.008.jpg"
+        
+            />
+        </p>
+        <p>
+            Now we will try to display a list of dictionary to our template I have
+            already made the list and I will be pasting it here as well.
+        </p>
+        <p>
+            <strong>items = [</strong>
+        </p>
+        </h1>
+        <p>
+            <strong>
+                {'id': 1, 'name': 'Phone', 'barcode': '893212299897', 'price': 500},
+            </strong>
+        </p>
+        <p>
+            <strong>
+                {'id': 2, 'name': 'Laptop', 'barcode': '123985473165', 'price': 900},
+            </strong>
+        </p>
+        <p>
+            <strong>
+                {'id': 3, 'name': 'Keyboard', 'barcode': '231985128446', 'price': 150}
+            </strong>
+        </p>
+        <p>
+            <strong>]</strong>
+        </p>
+        <h1>
+        <p>
+            We will paste this in our @app.route('/market') and remove the
+            "item_name=phone" and change It to "items=items" so we can display the list
+            "items":
+        </p>
+        <p
+            <img
+                width="587"
+                height="155"
+                src="style/data.010.jpg"
+        
+            />
+        </p>
+        <p>
+            And now if we go and change it in the jinja syntax to items and then
+            save,reload both the fileswe will see the following changes:
+        </p>
+        <p>
+            <img
+                width="543"
+                height="174"
+                src="style/data.012.jpg"
+        
+            />
+        </p>
+        <p>
+            We will see the list of dictonary displayed. This looks quite ugly so we
+            will insert this values into a bootstrap table. Just below the &lt; h1&gt;
+            tag in 'market.html' we willcreate a &lt;table&gt; tag and insert a table
+            whose code I will paste below :
+        </h1>
+        </p>
+        <pre><strong>&lt;table class="table table-hover table-dark"&gt;</strong></pre>
+        <pre><strong>    &lt;thead&gt;</strong></pre>
+        <pre><strong>        &lt;tr&gt;</strong></pre>
+        <pre><strong>            &lt;!-- Your Columns HERE --&gt;</strong></pre>
+        <pre><strong>            &lt;th scope="col"&gt;ID&lt;/th&gt;</strong></pre>
+        <pre><strong>            &lt;th scope="col"&gt;Name&lt;/th&gt;</strong></pre>
+        <pre><strong>            &lt;th scope="col"&gt;Barcode&lt;/th&gt;</strong></pre>
+        <pre><strong>            &lt;th scope="col"&gt;Price&lt;/th&gt;</strong></pre>
+        <pre><strong> </strong></pre>
+        <pre><strong> </strong></pre>
+        <pre><strong>        &lt;/tr&gt;</strong></pre>
+        <pre><strong>    &lt;/thead&gt;</strong></pre>
+        <pre><strong>    &lt;tbody&gt;</strong></pre>
+        <pre><strong>        &lt;!-- Your rows inside the table HERE: --&gt;</strong></pre>
+        <pre><strong>            &lt;tr&gt;</strong></pre>
+        <pre><strong>                &lt;td&gt;Value for Id&lt;/td&gt; </strong></pre>
+        <pre><strong>                 &lt;td&gt;Value for Name&lt;/td&gt;</strong></pre>
+        <pre><strong>                 &lt;td&gt;Value for Barcode&lt;/td&gt;</strong></pre>
+        <pre><strong>                 &lt;td&gt;Value for Price&lt;/td&gt;</strong></pre>
+        <pre><strong> </strong></pre>
+        <pre><strong> </strong></pre>
+        <pre><strong>            &lt;/tr&gt;</strong></pre>
+        <pre><strong>    &lt;/tbody&gt;</strong></pre>
+        <pre><strong>&lt;/table&gt;</strong></pre>
+        <pre> </pre>
+        <h1>
+        <p>
+            Once you paste this content and see the changes your page will appear like
+            this :
+        </p>
+        <p>
+            <img
+                width="565"
+                height="228"
+                src="style/data.014.jpg"
+        
+            />
+        </p>
+        <p>
+            Now to add data to this we will have to iterate through the list of items
+            and we will do this by using jinja, we will now go back to 'market.html' we
+            will create a for loop above our &lt;tr&gt; tag :
+        </p>
+        <p>
+            <img
+                width="244"
+                height="139"
+                src="style/data.016.jpg"
+        
+            />
+        </p>
+        <p>
+            This is a jinja syntax logic code. And we will now copy everything in
+            between &lt;tr&gt; and &lt;/tr&gt; and paste in for loop.
+        </p>
+        <p>
+            <img
+                width="472"
+                height="268"
+                src="style/data.018.jpg"
+        
+            />
+        </p>
+        <p>
+            Like this and if we save and see the changes:
+        </p>
+        <p>
+            <img
+                width="517"
+                height="192"
+                src="style/data.020.jpg"
+        
+            />
+        </p>
+        <p>
+            The number of iterations are correct but not the value so we will make the
+            following changes and add jinja code-
+        </p>
+        <p>
+            <img
+                width="543"
+                height="314"
+                src="style/data.022.jpg"
+        
+            />
+        </p>
+        <p>
+            After we have made the following changes we save and reload and see that we
+            get what we wanted and this is a very great achievement
+        </p>
+        <summary>You were able to create a table in python and then display in HTML template using the jinja syntax and without much effort to copy paste and make the whole thing again </summary>
+        <div id="menubar">
+        <ul id="menu">
+          <li><a href="jinja.html">Let's Learn more about jinja</a></li>
+        </ul>
+        </div>
+  </div>
+</body>
+</html>

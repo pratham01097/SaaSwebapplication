@@ -1,0 +1,546 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>HTML Templates</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">HTML templates</a></h1>
+          <h2>Stylings and templates</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="examples.html">Getting started with pythonanywhere</a></li>
+          <li><a href="page.html">@app.routes</a></li>
+          <li><a href="another_page.html">HTML templates</a></li>
+          <li><a href="contact.html">Sending Data to templates</a></li>
+          <li><a href="jinja.html">Jinja</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="wtform.html">Wtform</a></li>
+          <li><a href="database.html">Databases</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="jinja.html">Jinja</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="wtform.html">Wtform</a></li>
+          <li><a href="database.html">databse</a></li>
+          <li><a href="contact.html">Sending Data to templates</a></li>
+          <li><a href="another_page.html">HTML templates</a></li>
+          <li><a href="page.html">@app.routes</a></li>
+          <li><a href="examples.html">pythonanywhere</a></li>
+          <li><a href="index.html">about flask</a></li>
+          
+      </div>
+      <div id="content">
+      <h1>
+  
+        <!-- insert the page content here --><p>
+      <p>
+        This is a very important section in which you will see how we will be able to integrate our html code with our python app and also you will have a very good looking web page by end of this page.
+      </p>
+      <p>
+        
+          A web app in Flask, like most frameworks, consists of two kinds of files:
+          source code, which is written in Python, and templates, which are written
+          in an extended version of HTML. The source code says what the web app
+          should do, and the templates say how it should be displayed.
+      </p>
+      <p>
+          Let us create a template first-Click on the mysite in the breadcrumb trail
+          :
+      </p>
+      <p>
+          <img
+              width="595"
+              height="114"
+              src="style/html.002.jpg"
+      
+          />
+      </p>
+      <p>
+          After you click on the mysite it will take you to the directory of your web
+          app from where you accessed your flask_app.py file, we will now create a
+          subdirectory call templates where all of your templates will go:
+      </p>
+      <p>
+          <img
+              width="546"
+              height="357"
+              src="style/html.004.jpg"
+      
+          />
+      </p>
+      <p>
+          When you open templates a similar-looking page will appear, here we will
+          create our first HTML page, type home.html in the files tab, and click on
+          the new file. A blank editor will open on your page. It is completely fine
+          if you don't have a lot of experience in HTML but you will need to know a
+          few things like the basic syntax, but don't worry you can look for HTML
+          later we aren't going to code everything in HTML on our own we will either
+          be using bootstrap or some other sites for this tutorial I will also
+          provide a link if you want to read about HTML.
+      </p>
+      <p>
+          <a href="https://www.w3schools.com/html/html_basic.asp">
+              https://www.w3schools.com/html/html_basic.asp
+          </a>
+      </p>
+      <p>
+          you can read about these basics in your free time.
+      </p>
+      <p>
+          Back to our home.html's editor, we will try writing a simple heading using
+          the 'h1' tags that we used in flask_app as well.
+      </p>
+      <p>
+          Once you write "h1"; in the editor will on its own create a closing
+          tag ;, Write 'home page' in between these tags. Very importantly
+          don't forget to save the file.
+
+          After you are done writing the heading in h1 tags, let us go back to the
+          flask_app.py and make the following changes:
+      </p>
+      <p>
+          1)Where we have written from flask import Flask we have to add -
+      </p>
+      <p>
+          from flask import Flask, render_template
+      </p>
+      <p>
+          this is a feature of flask that will allow you to call your templates. And
+          it should look like :
+          <img
+              border="0"
+              width="357"
+              height="31"
+              src="style/html.006.jpg"
+      
+          />
+      </p>
+      <p>
+          After you have done this we will make changes to our @app.route and it
+          should have
+      </p>
+      <p>
+          return render_template('home. html') and should look like :
+      </p>
+      <p>
+          <img
+              border="0"
+              width="513"
+              height="70"
+              src="style/html.008.jpg"
+      
+          />
+      </p>
+      <p>
+          And now when you try to access your website you will see that what you had
+          written in between h1 tags will display :
+      </p>
+      <p>
+          <img
+              border="0"
+              width="462"
+              height="283"
+              src="style/html.010.jpg"
+      
+          />
+      </p>
+      <p>
+          But this is a very ugly looking website we will now try to make it look a
+          bit better so for this we will copy a styling template from the very famous
+          bootstrap :
+          <img
+              border="0"
+              width="315"
+              height="160"
+              src="style/html.012.jpg"
+      
+          />
+      </p>
+      <p>
+          You can use this link to copy the starter template from bootstrap
+      </p>
+      <p>
+          <a href="https://getbootstrap.com/docs/4.5/getting-started/introduction/">
+              https://getbootstrap.com/docs/4.5/getting-started/introduction/
+          </a>
+      </p>
+      <p>
+          After you have copied the code let's go back to our home.html and delete
+          whatever code was there and paste this instead of that code. If you save
+          this and reload your page you will see a page like this:
+      </p>
+      <p>
+          <img
+              border="0"
+              width="580"
+              height="173"
+              src="style/html.014.jpg"
+      
+          />
+      </p>
+      <p>
+          Now this is a very basic website just printing out a statement we want to
+          navigate through our website and make it look a bit better by adding a
+          navbar and a few aesthetics to the page we will see how , before
+          we do that let us change the tab name of our page. The content in between
+          h1 tags is our tab name
+      </p>
+      <p>
+          <img
+              border="0"
+              width="417"
+              height="15"
+              src="style/html.016.jpg"
+      
+          />
+      </p>
+      <p>
+          If we change this to 'Home Page' and save the file we will see the
+          following change on our website :
+      </p>
+      <p>
+          <img
+              border="0"
+              width="522"
+              height="36"
+              src="style/html.018.jpg"
+      
+          />
+      </p>
+      <p>
+          You will see that the home page appears on the tab.
+      </p>
+      <p>
+          Now let us go to bootstrap and bring a navbar(I will be attaching the link
+          for the same):
+      </p>
+      <p>
+          <a href="https://getbootstrap.com/docs/5.1/components/navbar/">
+              https://getbootstrap.com/docs/5.1/components/navbar/
+          </a>
+      </p>
+      <p>
+          <img
+              border="0"
+              width="469"
+              height="290"
+              src="style/html.020.jpg"
+      
+          />
+      </p>
+      <p>
+          I like this navbar as it has quite a few options so you can select this one
+          or any other of your choice but you will have to figure out how to make the
+          changes if you decide to choose another navbar.
+      </p>
+      <p>
+          Now if we copy this code and paste it just below our body tag like :
+      </p>
+      <p>
+          <img
+              border="0"
+              width="605"
+              height="268"
+              src="style/html.022.jpg"
+      
+          />
+      </p>
+      <p>
+          Check the indentations once after pasting it on the HTML page, after this
+          save and reload your website and you will see a good looking navbar on your
+          website like :
+      </p>
+      <p>
+          <img
+              border="0"
+              width="661"
+              height="54"
+              src="style/html.024.jpg"
+      
+          />
+      </p>
+      <p>
+          WOW! Looks amazing isn't it, something to flex about! But wait before that
+          a lot of work is still pending.
+      </p>
+      <p>
+          I think this navbar will look more classy if it has a dark mode so we will
+          change the first line of the navbar code as follows-:
+      </p>
+      <p>
+          <img
+              border="0"
+              width="630"
+              height="26"
+              src="style/html.026.jpg"
+      
+          />
+      </p>
+      <p>
+          The line exactly below the body tag has "navbar-light bg-light" we will
+          change both the "light" to "dark" as I have done in the snippet above, save
+          and reload the site we will get:
+      </p>
+      <p>
+          <img
+              border="0"
+              width="597"
+              height="66"
+              src="style/html.028.jpg"
+      
+          />
+      </p>
+      <p> 
+          <img
+              width="321"
+              height="66"
+              src="style/html.030.png"
+          />
+      </p>
+      
+
+      <p>
+          Now we will change the names of the options=
+      </p>
+      <table cellpadding="0" cellspacing="0" align="left">
+          <tbody>
+              <tr>
+                  <td width="134" height="0">
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                  </td>
+                  <td>
+                      <img
+                          width="344"
+                          height="29"
+                          src="style/html.032.jpg"
+      
+                      />
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <br clear="ALL"/>
+      <p>
+          The Navbar wrote in bold to some name of website like "Market Zone" looking
+          like the one above
+      </p>
+      <p>
+          After this, we will change the nav options of "Features" and "Pricing" to
+          "Market" and "Account"
+      </p>
+      <p>
+          <img
+              border="0"
+              width="591"
+              height="79"
+              src="style/html.034.jpg"
+      
+          />
+      </p>
+      <p>
+          To
+      </p>
+      <p>
+          <img
+              border="0"
+              width="499"
+              height="145"
+              src="style/html.036.jpg"
+      
+          />
+      </p>
+      <p>
+          We will also delete the following highlighted code as we don't need that
+          option:
+      </p>
+      <p>
+          <img
+              border="0"
+              width="582"
+              height="230"
+              src="style/html.038.jpg"
+      
+          />
+      </p>
+      <p>
+          We will save, reload and go back to our site and see the changes :
+      </p>
+      <p>
+          <img
+              border="0"
+              width="558"
+              height="101"
+              src="style/html.040.jpg"
+      
+          />
+      </p>
+      <p>
+          We will see the following options on our navbar and the changes. As you see
+          the navbar is in the dark mode we will try converting our site to dark
+          mode. And make the following changes in our HTML code just below the
+          closing &lt;/body&gt; tag please add the following code:
+      </p>
+      <p>
+          <img
+              border="0"
+              width="374"
+              height="108"
+              src="style/html.042.jpg"
+      
+          />
+      </p>
+      <p>
+          Here we create a new tag &lt;style&gt; and in between them we write the
+          following code as above, the part where I have written #212121 is a
+          hexadecimal color, we can also write a color like white but I prefer this
+          as it is a bit different than black and suits good, After doing this save
+          and reload the website and see the changes as follows :
+      </p>
+      <p>
+          <img
+              border="0"
+              width="601"
+              height="317"
+              src="style/html.044.jpg"
+      
+          />
+      </p>
+      <p>
+          It looks better right? We have now dealt with the basic styling and
+          aesthetic of how our website will be. We will just change "Hello ,World" to
+          "Home page", I a sure by now you can do it on your own :).
+      </p>
+      <p>
+          Now we look at how we can send data to the templates so for doing this we
+          will create a new route and create an items page for the market
+          <em>
+              (also before doing this it Is advisable to delete your
+              @app.route('/about) as it was only made to see how @app.route works)
+          </em>
+          we add a new @app.route('/market') and define a market_page and we will
+          also make a few alterations to the home page by defining a python function
+          in there which will make our work of navigating full proof later. And after
+          we make the changes in flask_app.py we have to create a new template named
+          'market.html' for our new route.
+      </p>
+      <p>
+          This is how our flask_app.py should look now :
+      </p>
+      <p>
+          <img
+              border="0"
+              width="240"
+              height="231"
+              src="style/html.046.jpg"
+      
+          />
+      </p>
+      <p>
+          We will also add one @app.route to the same function as when someone calls
+          ('/home') there should be a page to go and we add it just below our
+          @app.route('/'):
+      </p>
+      <p>
+          <img
+              border="0"
+              width="325"
+              height="161"
+              src="style/html.048.jpg"
+      
+          />
+      </p>
+      <p>
+          So whenever someone calls ('home') it will return our default page. (Don't
+          forget to save this code.)
+      </p>
+      <p>
+          Now we create a market.html and copy code from home.html and paste it in
+          our market.html and then we will make the necessary changes, we have to do
+          this because the basic aesthetics of all the pages of your website should
+          be the same and not look different.
+      </p>
+      <p>
+          Caution-Your market.html should be in your templates directory only and not
+          anywhere else.
+      </p>
+      <p>
+          This is how your 'market.html' must be looking right now-
+      </p>
+      <p>
+          <img
+              border="0"
+              width="599"
+              height="255"
+              src="style/html.050.jpg"
+      
+          />
+      </p>
+      <p>
+          We will carry out the following changes right now to differentiate it from
+          home change the heading(h1) content to "This is our market page"
+          and title; to "market page":
+      </p>
+      <p>
+          <img
+              border="0"
+              width="251"
+              height="210"
+              src="style/html.052.jpg"
+      
+          />
+      </p>
+      <p>
+          Now let us navigate to
+          <a href="http://yourusername.pythonanywhere.com/market">
+              http://yourusername.pythonanywhere.com/market
+          </a>
+      </p>
+      <p>
+          Please change "yourusername" to what your username is but before that
+          don't forget to save and reload the flask_app.py file after the changes we
+          have made. Our market page should be like this:
+      </p>
+      <p>
+          <img
+              border="0"
+              width="462"
+              height="247"
+              src="style/html.054.jpg"
+          />
+      </p>
+      <summary>In this section, you saw how to use bootstrap, install a. You also have a very good looking presentable website </summary>
+      <p>
+          Now we will see how to send data from route to HTML
+      </p>
+    <div id="menubar">
+        <ul id="menu">
+          <li><a href="contact.html">Sending Data to templates</a></li>
+        </ul>
+    </div>
+  </div>
+</body>
+</html>

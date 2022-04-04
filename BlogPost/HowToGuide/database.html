@@ -1,0 +1,424 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Datbase</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Connectig a database </span></a></h1>
+          
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="examples.html">Getting started with pythonanywhere</a></li>
+          <li><a href="page.html">@app.routes</a></li>
+          <li><a href="another_page.html">HTML templates</a></li>
+          <li><a href="contact.html">Sending Data to templates</a></li>
+          <li><a href="jinja.html">Jinja</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="wtform.html">Wtform</a></li>
+          <li><a href="database.html">Databases</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="jinja.html">Jinja</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="wtform.html">Wtform</a></li>
+          <li><a href="database.html">databse</a></li>
+          <li><a href="contact.html">Sending Data to templates</a></li>
+          <li><a href="another_page.html">HTML templates</a></li>
+          <li><a href="page.html">@app.routes</a></li>
+          <li><a href="examples.html">pythonanywhere</a></li>
+          <li><a href="index.html">about flask</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+      <h1>
+        <p>
+           DATABASES
+       </p>
+       <p>
+        This is a very important and hard part where you will learn how to link your code to a database and how you can simply push all your login details to a database 
+       </p>
+       <p>
+           Now we will see how can we store the data that comes into the forms to a
+           database using pythonanywhere, using pythonanywhere is a very convenient
+           way of using databases as there are very less issues using an online ide
+           and especially pythonanywhere has made it more simple. When I first did it
+           using vscode I had to face many issues but python anywhere was indeed very
+           simple. We will start by creating a database, click on the pythonanywhere
+           logo it will take you to the dashboard, on the top right corner there are a
+           few options like Web Files, Select Databases from that it will redirect you
+           to a site looking like this :
+       </p>
+       <p>
+           <img
+               width="561"
+               height="262"
+               src="style/db1.jpg"
+           />
+       </p>
+       <p>
+           The first thing you need to do to set up a MySQL database specifies the
+           password you want to use when accessing it. Enter a new password here; make
+           it something different to the one you use to log in to PythonAnywhere,
+           because this database password will have to exist in your Python code (so
+           that it can connect to your server), so it's more secure to use a different
+           one. Make a note of the password you've chosen, and once you've entered it
+           twice in the appropriate fields, click the "Initialize MySQL" button. Wait
+           for a few moments for your database to be set up, and you'll come back to
+           the "Databases" page, but now some extra options will have appeared:
+       </p>
+       <p>
+           <img
+               width="413"
+               height="191"
+               src="style/db2.jpg"
+       
+           />
+       </p>
+       <p>
+           At the top, under "Connecting", you'll see the details you'll need to
+           connect to the MySQL server associated with your account. Next is a list of
+       MySQL databases; one was created for you called <em>yourusername</em>    <code>$default</code>, and there is also an option to create further
+           databases. In general, it's good practice to have a separate database for
+           each website you're working on to keep everything nicely separated. Go to
+           the "Create database" section in the middle of the page, and create one,
+           giving it the name "login".
+       </p>
+       <p>
+           <img
+               width="501"
+               height="129"
+               src="style/db3.jpg"
+       
+           />
+       </p>
+       <p>
+           You will see that one was already created for you <em>yourusername$</em>
+           default and the one which we created was 'yourusername.$login', now we have
+           successfully created a database on the backend and now we will add some
+           code to connect it to our python code, just below the line that says app.
+           config we will add the following code:P
+       </p>
+       <p>
+           SQLALCHEMY_DATABASE_URI =
+           "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".fo
+           format(
+       </p>
+       <p>
+           username="the username from the 'Databases' tab",
+       </p>
+       <p>
+           password="the password you set on the 'Databases' tab",
+       </p>
+       <p>
+           hostname="the database host address from the 'Databases' tab",
+       </p>
+       <p>
+           databasename="the database name you chose,",
+       </p>
+       <p>
+           )
+       </p>
+       <p>
+           app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
+       </p>
+       <p>
+           app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
+       </p>
+       <p>
+           app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+       </p>
+       <p>
+           You will need to change the values of
+           username,password,hostname,datbasename to the once in your database
+           dashboard and the password you choose.
+       </p>
+       <p>
+           The first of these commands set a variable to the specifically-formatted
+           string SQLAlchemy needs to connect to your database. The second stash that
+           away in Flask's application configuration settings.
+       </p>
+       <p>
+           The third sets an important database connection configuration parameter,
+           which you don't need to know the details of.
+       </p>
+       <p>
+           So that's the code that configures our database connection; now we need
+           some code to connect to it! Put this just after the code you just added:
+       </p>
+       <pre><code>db = SQLAlchemy(app)</code></pre>
+       <p>
+           and after adding all this your flask_app.py should look like:
+       </p>
+       <p>
+           <img
+               width="580"
+               height="152"
+               src="style/db4.jpg"
+       
+           />
+       </p>
+       <p>
+           Now after this we will have to make an import of SQLAlchemy :
+       </p>
+       <p>
+           from flask_sqlalchemy import SQLAlchemy
+       </p>
+       <p>
+           Next, we need to add a <em>model</em>. A model is a Python class that
+           specifies the stuff that you want to store in the database; SQLAlchemy
+           handles all of the complexities of loading stuff from and storing stuff in
+           MySQL; Now we will go back to our python code and create a table to store
+           the data of Account setups, the field of our form :
+       </p>
+       <p>
+           <img
+               width="461"
+               height="117"
+               src="style/db5.jpg"
+       
+           />
+       </p>
+       <p>
+           You will write this code just below db=SQLAlchemy(app). In this, we are
+           creating a table for the values of RegisterForm() after writing this code
+           if you save and reload
+       </p>
+       <p>
+           After coding this we will now try and make an actual connection now but
+           before this let's save this and see if our code has not caused any problem
+           and if our site works like normal as it was working before, we will
+           initiate an actual connection using our bash console, open the mysite
+       directory using files and there will be an option to    <strong>open bash console here</strong> :
+       </p>
+       <p>
+           <img
+               width="587"
+               height="198"
+               src="style/db6.jpg"
+       
+           />
+       </p>
+       <p>
+           Once you click on that a bash console looking like this will open up:
+       </p>
+       <p>
+           <img
+               width="365"
+               height="229"
+               src="style/db7.jpg"
+       
+           />
+       </p>
+       <p>
+           Ensure that the '
+           <em>
+               `/mysite' is not missing,
+               <strong>
+                   if you try to do this in some other directory other than mysite it
+                   will not work.
+               </strong>
+           </em>
+       </p>
+       <p>
+           Write-'ipyhton3.6'
+       </p>
+       <p>
+           It will enter into a ipython console now looking like this:
+       </p>
+       <p>
+           <img
+               width="409"
+               height="218"
+               src="style/db8.jpg"
+       
+           />
+       </p>
+       <p>
+           Just to be sure we will again check the directory by importing os and:
+       </p>
+       <p>
+           import os
+       </p>
+       <p>
+           os.getcwd()
+       </p>
+       <p>
+           <img
+               width="296"
+               height="33"
+               src="style/db9"
+       
+           />
+       </p>
+       <p>
+           <img
+               width="290"
+               height="44"
+               src="style/db10.jpg"
+       
+           />
+       </p>
+       <p>
+           If there si mysite in your cwd we can go ahead with connecting the SQL,
+           after this write the following code in the ipyhton console:
+       </p>
+       <pre><code>from flask_app import db</code></pre>
+       <pre><code>db.create_all()</code></pre>
+       <p>
+           If both of these lines run without error the connection has been made.
+       </p>
+       <p>
+           <img
+               width="482"
+               height="112"
+               src="style/db11.png"
+       
+           />
+       </p>
+       <p>
+           And you can exit the console by exit().
+       </p>
+       <p>
+           Once you've done that, the table has been created in the database. Let's
+           confirm that. Go to the tab you kept open that's showing the "Databases"
+       PythonAnywhere page, and click on your database name (<em>yourusername</em>    <code>$login</code>). This will start a new console, running the MySQL
+           command line. Once it has loaded (it will show a <code>mysql&gt;</code>
+           prompt), run the command:
+       </p>
+       <pre><code>show tables;</code></pre>
+       <pre><code>describe comments;</code></pre>
+       <p>
+           (Don't forget the semicolon at the end!)
+       </p>
+       <p>
+           <img
+               width="340"
+               height="278"
+               src="style/db12.png"
+       
+           />
+       </p>
+       <p>
+           You can see that our table has been created with all the fields that we had
+           written in our model.
+       </p>
+       <p>
+           Now we will try to push the data from our form to this database and for
+           this we will have to go back to our flask_app.py and in the
+           @app.routes('register') we will make the following changes:
+       </p>
+       <pre>    if form.validate_on_submit():</pre>
+       <pre>            user_to_create=User(username=form.username.data,</pre>
+       <pre>                                email_address=form.email_address.data,</pre>
+       <pre>                                password=form.password1.data)</pre>
+       <pre>            db.session.add(user_to_create)</pre>
+       <pre>            db.session.commit()</pre>
+       <pre>            return redirect(url_for('market_page'))</pre>
+       <p>
+           <img
+               width="524"
+               height="182"
+               src="style/db13.jpg"
+       
+           />
+       </p>
+       <p>
+           Along with the code above you will have to add the line where you add
+           METHODS on the line of @app.route after writing this let us undersatnd what
+           it is doing in form.validate_on_submit() initiates after submit button is
+           pressed, form.<em>field.</em>data gets the data from the form, and db.
+           session.add() adds the data to the database and db.session.commit() will
+           commit the changes, and return redirect will take you to another page
+           ('/market') after you are done filling the form.
+       </p>
+       <p>
+           Before we try and use this feature we will have to add a few imports along
+           with
+       </p>
+       <p>
+           from flask import Flask:
+       </p>
+       <p>
+           <img
+               width="549"
+               height="21"
+               src="style/db14.jpg"
+       
+           />
+       </p>
+       <p>
+           Now we can save the changes and reload the site and try filling in a form :
+       </p>
+       <p>
+           <img
+               width="599"
+               height="235"
+               src="style/db15.jpg"
+       
+           />
+       </p>
+       <p>
+           After you have filled in the details and you click on submit the data will
+           we pass on to the database we can check this by going to the console where
+           we tried to see our table in MYSQL :
+       </p>
+       <p>
+           And we write the following code :
+       </p>
+       <p>
+           select * from Login;
+       </p>
+       <p>
+           <img
+               width="417"
+               height="68"
+               src="style/db16.jpg"
+       
+           />
+       </p>
+       <p>
+           I have struck out the password but you will see the password as well to
+           overcome this there is a method that we did not use in this tutorial, we
+           also have not looked at reconfirming passwords.
+       </p>
+       <p>
+           Finally, your working site is ready with its database connection working
+           well
+           <img
+               width="598"
+               height="303"
+               src="style/db17.jpg"
+       
+           />
+       </p>     
+       <summary>You learnt how to create a new database in pythonanywhere and also you were able to get it linked to your code.</summary>    
+          <div id="menubar">
+            <ul id="menu">
+              <li><a href="about.html">Want to know who created this ? </a></li>
+            </ul>
+          </div>
+  </div>
+</body>
+</html>

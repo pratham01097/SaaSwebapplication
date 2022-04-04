@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>App.routes</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Learning about App.routes</a></h1>
+          
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href="examples.html">Getting started with pythonanywhere</a></li>
+          <li><a href="page.html">@app.routes</a></li>
+          <li><a href="another_page.html">HTML templates</a></li>
+          <li><a href="contact.html">Sending Data to templates</a></li>
+          <li><a href="jinja.html">Jinja</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="wtform.html">Wtform</a></li>
+          <li><a href="database.html">Databases</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="jinja.html">Jinja</a></li>
+          <li><a href="navbar.html">Navbar</a></li>
+          <li><a href="wtform.html">Wtform</a></li>
+          <li><a href="database.html">databse</a></li>
+          <li><a href="contact.html">Sending Data to templates</a></li>
+          <li><a href="another_page.html">HTML templates</a></li>
+          <li><a href="page.html">@app.routes</a></li>
+          <li><a href="examples.html">pythonanywhere</a></li>
+          <li><a href="index.html">about flask</a></li>
+        </ul>
+       
+      </div>
+      <div id="content">
+        <h1>
+          In this section, you will be able create different pages on your website with the help of @app.routes
+        <p>
+            We will now go to flask_app.py where pythonanywhere had created a default
+            code for us. We already tried changing the return value to 'your name' and
+            saw the difference. Now we will try changing the fond by using some html
+            code as follows:
+        </p>
+        <p>
+            <img
+                width="498"
+                height="36"
+                src="style/app.002.jpg"
+        
+            />
+        </p>
+        <p>
+            After changing the code don't forget to save and refresh but clicking on
+            the blue reload.
+        </p>
+        <p>
+            We will see a difference in the site and will get a site like this:
+        </p>
+        <p>
+            <img
+                width="254"
+                height="84"
+                src="style/app.004.jpg"
+        
+            />
+        </p>
+        <p>
+            Now we will try creating another @app.route()
+        </p>
+        <p>
+            Now we will make the following changes to the flask_app.py by adding the
+            following code :
+        </p>
+        <p>
+            <img
+                width="332"
+                height="87"
+                src="style/app.006.jpg"
+            />
+        </p>
+        <p>
+            We will add this code below the first @app.route
+        </p>
+        <p>
+            This will basically create another navigate or template of our website and
+            when we add '/about' to our url we will get the about_page() function
+            activated and it will do what it is asked to, here our about page will look
+            like :
+        </p>
+        <p>
+            <img
+                width="192"
+                height="109"
+                src="style/app.008.jpg"
+            />
+        </p>
+        <p>
+            When the url is :
+            <img
+                width="198"
+                height="39"
+                src="style/app.009.jpg"
+        
+            />
+            <p>
+            the '/about' it takes you to another page
+            </p>
+        </p>
+        <p>
+            You can create as many as routes you want using flask.
+        </p>
+         <Summary>You were able to create 2 different pages and navigate through them using the url </Summary> 
+      <div id="menubar">
+        <ul id="menu">
+          <li><a href="another_page.html">HTML templates</a></li>
+        </ul>
+    </div>
+        
+      </div>
+    </div>
+    <div id="menubar">
+        <ul id="menu">
+          <li><a href="another_page.html">HTML templates</a></li>
+        </ul>
+    </div>
+
+  </div>
+</body>
+</html>
