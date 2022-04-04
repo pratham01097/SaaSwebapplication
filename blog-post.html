@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Google Login With Flask </title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Blog Template">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- FontAwesome JS-->
+	<script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+		integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+		crossorigin="anonymous"></script>
+
+	<!-- Plugin CSS -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+
+
+</head>
+
+<body>
+
+	<header class="header text-center">
+		<h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Pratham's Blog</a></h1>
+
+		<nav class="navbar navbar-expand-lg navbar-dark">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+				aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div id="navigation" class="collapse navbar-collapse flex-column">
+				<div class="profile-section pt-3 pt-lg-0">
+					<img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.jpg" alt="image">
+
+					<div class="bio mb-3">Hello Guys My name is pratham adwani, you can reach me at my email navigating
+						on the about page <br><a href="about.html">Find out more about me</a></div>
+					<!--//bio-->
+					<ul class="social-list list-inline py-3 mx-auto">
+						<li class="list-inline-item"><a href="https://twitter.com/home"><i
+									class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.linkedin.com/in/pratham-adwani-a2391288/"><i
+									class="fab fa-linkedin-in fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://github.com/pratham01097/SaaSwebapplication"><i
+									class="fab fa-github-alt fa-fw"></i></a></li>
+
+					</ul>
+					<!--//social-list-->
+					<hr>
+				</div>
+				<!--//profile-section-->
+
+				<ul class="navbar-nav flex-column text-left">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span
+								class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog
+							Post</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					</li>
+				</ul>
+
+
+			</div>
+		</nav>
+	</header>
+
+	<div class="main-wrapper">
+
+		<article class="blog-post px-3 py-5 p-md-5">
+			<div class="container">
+				<header class="blog-post-header">
+					<h2 class="title mb-2">Software as a Service</h2>
+
+				</header>
+				<p>
+					<strong>Introduction </strong>
+				</p>
+				<p>
+					Hello Guys You will be working on a very demanding project required by
+					almost any industry and all businesses.
+				</p>
+				<p>
+					As a Project aim I sounds very easy , but note that there is a huge
+					difference when it comes to the real world, hands on experience that’s why
+					we opt to take the 1028 challenges to accept the risk and solve it or maybe
+					try to solve it.
+				</p>
+				<p>
+					In this Project we will Be creating a SaaS Template such that a developer
+					or a company will simply take our template and attach to their program and
+					get the Login System and the Payments System working ,I also have developed
+					a basic Common good looking flask page for any startup, business to take it
+					with the rest of the Service , maybe a a cherry on the top so that they can
+					focus on the main working rather than worrying about the bits and pieces.
+				</p>
+				<p>
+					In this Blog post I have jotted down my experience with the project so far
+					and also the future goal or the extending goal. You can read through this
+					blog post and continue extending and getting the existing part within one
+					week’s of time.
+				</p>
+				<p>
+					<strong>Prerequisites:</strong>>
+				</p>
+				<p>
+					1)Google account
+				</p>
+				<p>
+					2)Pythonanywhere implementation
+				</p>
+				<p>
+					3)PayPal Developer account
+				</p>
+				<p>
+					<strong>Explaining a few topics/terms before we begin</strong>
+				</p>
+				<p>
+					1)SaaS-
+				</p>
+				<p>
+					Web-based software, on-demand software, and hosted software are all terms
+					used to describe SaaS applications. SaaS apps, whatever their name, are
+					hosted on the servers of a SaaS provider. The service provider is in charge
+					of the application's security, availability, and performance.
+				</p>
+				<p>
+					We are trying to create something that can be refereed to as a SaaS
+				</p>
+				<p>
+					2) Flask-
+				</p>
+				<p>
+					Flask is a web framework, it's a Python module that lets you develop web
+					applications easily. It's has a small and easy-to-extend core, It comes
+					along with templating languages and It also has many cool features like url
+					routing, template engine. It is a WSGI web app framework.
+				</p>
+				<p>
+					We will be using this to implement our services.
+				</p>
+				<p>
+					3)PythonAnywhere-
+				</p>
+				<p>
+					It is a online hosting service and an IDE.
+				</p>
+				<p>
+					<strong>Why to Use My Blog Post-</strong>
+				</p>
+				<p>
+					<strong> </strong>
+					Doing so will save you a lot of time coding various things and watching
+					various tutorials to do so. There are many tutorials on the subject, but
+					they won't work and you'll have to spend nights debugging a simple mistake,
+					but I'll show you how to implement this in your web app by changing a few
+					lines of code.
+				</p>
+				<p>
+					There are many other blogs helping with google login but you will find
+					hardly any implementation on pythonanywhere, pyhtonanywhere has a lot of
+					problems in implementing redirect URI as it has many rules to be followed
+					but if you are doing it on a localhost you will not face these issues and
+					the same is reported on the link of pyhtonanywhere forum below :
+				</p>
+				<p>
+					<a href="https://www.pythonanywhere.com/forums/topic/626/">
+						https://www.pythonanywhere.com/forums/topic/626/
+					</a>
+				</p>
+				<p>
+					<a href="https://www.pythonanywhere.com/forums/topic/27266/">
+						https://www.pythonanywhere.com/forums/topic/27266/
+					</a>
+				</p>
+				<p>
+					You wouldn’t face all these issues Implementing my source code.
+				</p>
+				<p>
+					I also will be including the extension to my How to Guide that will help
+					you create the basic good looking website for your continuation.
+				</p>
+				<p>
+					I have also included the links to documents that I read for being
+					transparent and might help you if you want to read about them in any case.
+				</p>
+				<p>
+					Additionally, if you read my How-To-Tutorial and then return to this, you will have an edge because
+					it has a step-by-step guide to building a simple website using Flask and a local login that saves
+					the details into a local database in pythonanywhere
+					<a
+						href="D:\Second Semester Queens University\1028\Blog Post  How to guide\DevBlog v1.1 Free Website Template - Free-CSS.com\DevBlog-Theme-master\How to Guide\index.html">
+						How to Guide
+					</a>
+				</p>
+			
+			<header class="blog-post-header">
+				<h2 class="title mb-2">Creating credentials</h2>
+
+			</header>
+
+			<div>
+				<p>
+					We will go the google web developers site and create credentials for your
+					web app that will be very essential for your program to work.
+				</p>
+				<p>
+					<a href="https://console.developers.google.com/">
+						https://console.developers.google.com/
+					</a>
+				</p>
+				<p>
+					if you go on this website and login using your google account details you
+					will see a similar looking website :
+				</p>
+				<p>
+					<img width="260" height="159" src="assets/images/clip_image002.jpg" />
+					<br clear="ALL" />
+					if you navigate to the credentials and create a select the create new
+					project option it will ask you to name your project and proceed by changine
+					the name bur nothing else you will be redirected to a similar looking page
+					:
+				</p>
+				<p>
+					<img border="0" width="597" height="157" src="assets/images/clip_image004.jpg" />
+				</p>
+				<p>
+
+					<br clear="ALL" />
+					You will first have to configure the oAuth consent screen you can do this
+					by clicking on the option on the top right of the page
+				</p>
+				<p>
+					<img width="334" height="206" src="assets/images/clip_image006.jpg" />
+				</p>
+				<p>
+					You have to select external unless you are creating it for usage within
+					your organization only,and you will be redirected to a page where you will
+					be asked for basic information like name, mail id you only have to fill 3
+					essential option the mail Id and app name and you can fill the rest if it
+					applies to your app like the logo and policies and others if you have
+					them.And then proceed to the next page .you don’t have to make any changes
+					in any further section and just proceed to the consent screen.
+				</p>
+				<p>
+					The consent screen should look like this :
+				</p>
+				<p>
+					<img border="0" width="298" height="253" src="assets/images/clip_image008.jpg" />
+				</p>
+				<p>
+					<img width="259" height="88" src="assets/images/clip_image010.jpg" />
+					<br clear="ALL" />
+					And after you do this you go back to the credentials and select the create
+					credentials options :
+				</p>
+				<p>
+					And a drop down list will appear in which you have to select the OAuth
+					client id option:
+				</p>
+				<p>
+					<img border="0" width="238" height="177" src="assets/images/clip_image012.jpg" />
+				</p>
+				<p>
+					It will ask you for the type of application that you are creating and you
+					have to select the WEB APP option and a screen looking like this will
+					appear :
+				</p>
+				<p>
+					<img border="0" width="274" height="266" src="assets/images/clip_image014.jpg" />
+				</p>
+				<p>
+					Here you will writre the name of the application that you are making and
+					add the authorize uris for your application, please note that this is a
+					very essential part of the project as the rules regarding the authorized
+					URIs are very strict, I also attaching the list of rules later but for now
+					click on the ADD URI option and add the following :
+				</p>
+				<p>
+					<a href="https://yourusername.pythonanywhere.com/googlecallback">
+						<em>https://yourusername.pythonanywhere.com/googlecallback</em>
+					</a>
+					<em></em>
+				</p>
+				<p>
+					be careful while writing this as if you copy-paste it will be HTTP but the
+					rules say that it should be HTTPS.
+				</p>
+				<p>
+					<a href="https://developers.google.com/identity/protocols/oauth2/web-server#prerequisites">
+						https://developers.google.com/identity/protocols/oauth2/web-server#prerequisites
+					</a>
+				</p>
+				<p>
+					You can find the validation rules on this link if you scroll down.
+				</p>
+				<p>
+					After you add the redirect URI you will get pop with client Id and client
+					secret:
+				</p>
+				<p>
+					<img width="294" height="251" src="assets/images/clip_image016.jpg" />
+					<br clear="ALL" />
+				</p>
+				<p>
+					You can copy these 2 and keep them somewhere safe and also download the
+					JSON file as we will be using that in the later stage.
+				</p>
+			</div>
+
+
+			<div class="blog-post-body">
+
+				<p> </p>
+
+				<h3 class="mt-5 mb-3">Requirements</h3>
+				<p>
+					These are the requirements that you will need to execute before implementing the code
+				</p>
+				<p>
+					Firstly we have to install the oauth lib we will do it by executing a pip install on the bash
+					console and it should look like
+				<p>
+					pip install oauthlib
+				</p>
+				<p>
+					This is the list of imports that you will have to make.
+				</p>
+				<pre>
+					    <code>
+import os
+import pathlib
+from google.oauth2 import id_token
+from google_auth_oauthlib.flow import Flow
+from pip._vendor import cachecontrol
+import google.auth.transport.requests
+import requests
+
+import google.oauth2.credentials
+					    </code>
+				    </pre>
+				<h3 class="mt-5 mb-3">Crendentials and Flow </h3>
+				<p>
+					After this, we will add the credentials from the developer site to the
+					python app
+				</p>
+				<p>
+					you have to add your client’s secrets in this way it is the safest way to
+					do so as your code is not at risk as if your client’s secret is leaked It
+					can be a point of risk, you have to download the file as stated above and
+					use the os. pathlib to get the clients secret from this.
+				</p>
+				<p>
+					Now we will create a flow for this api, The "server" flow and the
+					"implicit" flow are the two most prevalent methods for authenticating a
+					user and receiving an ID token. The server flow allows an application's
+					back-end server to validate a user's identification via a browser or mobile
+					device. When a client-side program needs to access APIs directly rather
+					than through its back-end server, the implicit flow is employed.
+				</p>
+				<p>
+					We will now start by creating a flow which will have some of the essential
+					details like redirect_uri, scopes I will now describe what a scope and
+					redirect URI is-
+				</p>
+				<p>
+					Scopes- In OAuth 2.0, scope is a means for limiting an application's access
+					to a user's account. An application can request one or more scopes, which
+					are then shown to the user in the consent screen, and the program's access
+					token is limited to the scopes provided.
+				</p>
+				<p>
+					Redirect_uri=An authorized redirect URI for the given <code>client_id</code> specified in the API
+					Console
+					<a href="https://console.developers.google.com/apis/credentials">
+						Credentials page
+					</a>
+					, as described in
+					<a href="https://developers.google.com/identity/protocols/oauth2/openid-connect#setredirecturi">
+						Set a redirect URI
+					</a>
+					.This is the definition from the google docs as it is best described there
+					and has the links to the appropriate redirects.
+				</p>
+
+				<pre>
+					    <code>
+GOOGLE_CLIENT_ID = "1063710188263-m4ua049kf6aef99m722ei59jgf7m1ono.apps.googleusercontent.com"
+client_secrets_file = os.path.join(pathlib.Path(__file__).parent, "client_secret.json")
+
+
+flow = Flow.from_client_secrets_file(
+    client_secrets_file=client_secrets_file,
+    scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],
+    redirect_uri="https://pratham7.pythonanywhere.com/oauth2callback"
+)
+					    </code>
+				    </pre>
+				<header class="blog-post-header">
+					<h2 class="title mb-2">Creating Functions and Pages to display the results</h2>
+
+				</header>
+				<pre>
+					    <code>
+app.config['SECRET_KEY']='702d3777b1fe202adba826ec'
+
+os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+def login_is_required(function):
+    def wrapper(*args,**kwargs):
+        if "google_id" not in session:
+            return abort(401)
+        else:
+            return function()
+    return wrapper
+
+@app.route("/login")
+def login():
+    authorization_url, state = flow.authorization_url()
+    session["state"] = state
+    return redirect(authorization_url)
+
+@app.route("/oauth2callback")
+def oauth2callback():
+    flow.fetch_token(authorization_response=request.url)
+
+    if not session["state"] == request.args["state"]:
+        abort(500)  # State does not match!
+
+    credentials = flow.credentials
+    request_session = requests.session()
+    cached_session = cachecontrol.CacheControl(request_session)
+    token_request = google.auth.transport.requests.Request(session=cached_session)
+
+    id_info = id_token.verify_oauth2_token(
+        id_token=credentials._id_token,
+        request=token_request,
+        audience=GOOGLE_CLIENT_ID
+    )
+
+    session["google_id"] = id_info.get("sub")
+    session["name"] = id_info.get("name")
+    return redirect("/")
+
+
+@app.route("/logout")
+
+def logout():
+
+    session.clear()
+    del session['credentials']
+    return "Log out successful"
+					    </code>
+				    </pre>
+
+				<header class="blog-post-header">
+					<h2 class="title mb-2">Testing of code</h2>
+
+				</header>
+				<p>
+					<video width="320" height="240" controls>
+						<source src="assets/images/Test.mp4" type="video/mp4">
+						Your Browser does not support this 
+					</video>
+				</p>
+
+				
+				<header class="blog-post-header">
+					<h2 class="title mb-2">Explaination of the code</h2>
+
+				</header>
+				<p>
+					You might need to understand a few things like changing the scopes
+					according to your app that you are using, you might need more scopes or
+					other scopes that I have used here so you can easily look up for scopes in
+					a link I am attaching below
+				</p>
+				<p>
+					<a href="https://developers.google.com/identity/protocols/oauth2/scopes">
+						https://developers.google.com/identity/protocols/oauth2/scopes
+					</a>
+				</p>
+				<p>
+					and in this program we will also add an access type
+				</p>
+				<p>
+					access type:-(Google devlopers site defination)
+				</p>
+				<p>
+					Indicates whether your application can refresh access tokens when the user
+					is not present at the browser. Valid parameter values are <code>online</code>, which is the default
+					value, and <code>offline</code>.
+				</p>
+				<p>
+					Set the value to <code>offline</code> if your application needs to refresh
+					access tokens when the user is not present at the browser. This is the
+					method of refreshing access tokens described later in this document. This
+					value instructs the Google authorization server to return a refresh token <em>and</em> an access
+					token the first time that your application exchanges
+					an authorization code for tokens.
+				</p>
+				<p>
+					In Python, set the <code>access_type</code> parameter by specifying<code>access_type</code> as a
+					keyword argument when calling the <code>flow.authorization_url</code> method:
+				</p>
+				<p>
+					We will add this just after we have defined the flow In your program.
+				</p>
+				<p>
+				<pre>
+							<code>
+authorization_url, state = flow.authorization_url(
+    # Enable offline access so that you can refresh an access token without
+    # re-prompting the user for permission. Recommended for web server apps.
+    access_type='offline',
+    # Enable incremental authorization. Recommended as a best practice.
+    include_granted_scopes='true')
+							</code>
+						</pre>
+				</p>
+
+				<p>
+					If you add the following code to your program you will have sweetly added
+					google login.
+				</p>
+				<p>
+					Valuable links and resources-
+				</p>
+				<p>
+					<a href="https://developers.google.com/identity/protocols/oauth2/web-server">
+						https://developers.google.com/identity/protocols/oauth2/web-server
+					</a>
+				</p>
+				<p>
+					if you try to use the code on this in pythonanywhere there will be a
+					certain amount of errors that you might face.
+				</p>
+				<p>
+					But it is the place to best read about the fundamentals of the oauth lib.
+				</p>
+				<p>
+					<a href="https://oauthlib.readthedocs.io/en/latest/feature_matrix.html#oauth-2-0">
+						https://oauthlib.readthedocs.io/en/latest/feature_matrix.html#oauth-2-0
+					</a>
+				<p>
+					<strong>A long term Aim for the Project-</strong>
+				</p>
+				<p>
+					This is the login part that I have got working and you can get working but
+					we also had to include the Payments Portal to the Page for doing so you
+					will have to use the REST API in flask to get the Paypal subscriptions
+					working
+				</p>
+				<p>
+					As I see that you have come this far you must have a good idea about Oauth
+					library and integration, using that I was able to get the paypal checkout
+					using the PayPal devlopers page and can be done by creating a new html
+					template and rendering it on flask_app.py and the code for the same could
+					be found on the paypal developer version here-
+					<a href="https://developer.paypal.com/docs/checkout/standard/integrate/">
+						https://developer.paypal.com/docs/checkout/standard/integrate/
+					</a>
+				</p>
+				<p>
+					You can follow the steps and simply Add a simple checkout button .
+				</p>
+				<p>
+					But our long aim for the project is to create a subscription plan for the
+					App, you will need to use REST API for the same.
+				</p>
+				<p>
+					1)Subscription PayPal –
+				</p>
+				<p>
+					<a href="https://developer.paypal.com/docs/subscriptions/">
+						https://developer.paypal.com/docs/subscriptions/
+					</a>
+				</p>
+				<p>
+					you can refer the paypal documentation of the REST API and Subscription
+					plans, they also have a GitHub Directory of python made-
+				</p>
+				<p>
+					<a href="https://github.com/paypal/Checkout-Python-SDK">
+						https://github.com/paypal/Checkout-Python-SDK
+					</a>
+				</p>
+				<p>
+					This is the guide to This is a part of the next major PayPal SDK. It
+					includes a simplified interface to only provide simple model objects and
+					blueprints for HTTP calls. This repo currently contains functionality for
+				PayPal Checkout APIs which includes    <a href="https://developer.paypal.com/docs/api/orders/v2/">Orders V2</a>
+					and
+					<a href="https://developer.paypal.com/docs/api/payments/v2/">
+						Payments V2
+					</a>
+					.
+				</p>
+				<p>
+					Before you start doing Any of this you will have to read about REST APIs if
+					you have no background in them, I will attach some links of videos and
+					documentation that can help-
+				</p>
+				<p>
+					<a href="https://www.youtube.com/watch?v=qbLc5a9jdXo&amp;t=474s">
+						https://www.youtube.com/watch?v=qbLc5a9jdXo&amp;t=474s
+					</a>
+				</p>
+				<p>
+					<a href="https://www.youtube.com/watch?v=GMppyAPbLYk&amp;t=1725s">
+						https://www.youtube.com/watch?v=GMppyAPbLYk&amp;t=1725s
+					</a>
+				</p>
+				<p>
+					These few links will help you to understand Python and REST APIs
+					Implementation
+				</p>
+				<p>
+					You can refer to this tutorial where he has tried to do a paypal
+					integration using flask
+				</p>
+				<p>
+					<a href="https://pythonprogramming.net/paypal-flask-tutorial/">
+						https://pythonprogramming.net/paypal-flask-tutorial/
+					</a>
+				</p>
+				<p>
+					but can’t completely copy this as It is old and needs changes, also needs
+					major changes as this is not what we exactly are trying to integrate.
+				</p>
+				
+				</p>
+				<nav class="blog-nav nav nav-justified my-5">
+					<a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i
+							class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+					<a class="nav-link-next nav-item nav-link rounded-right" href="blog-list.html">Next<i
+							class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+				
+
+
+			</div>
+		</div>
+			<!--//container-->
+		</article>
+
+
+		<footer class="footer text-center py-2 theme-bg-dark">
+
+
+			<small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href=""
+					target="_blank">Pratham Adwani</a> for developers</small>
+
+		</footer>
+
+	</div>
+	<!--//main-wrapper-->
+
+
+
+
+
+
+	<!-- Javascript -->
+	<script src="assets/plugins/jquery-3.3.1.min.js"></script>
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Page Specific JS -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="assets/js/blog.js"></script>
+
+
+
+
+</body>
+
+</html>
